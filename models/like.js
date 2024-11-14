@@ -2,9 +2,8 @@ import mongoose from "mongoose";
 
 const LikeSchema = new mongoose.Schema({
     owner: {
-        type: mongoose.SchemaTypes.ObjectId,
+        type: String,
         required: true,
-        ref: 'User'
     },
     blog: {
         type: mongoose.SchemaTypes.ObjectId,
@@ -13,4 +12,5 @@ const LikeSchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("Like", LikeSchema)
+
+export default mongoose.models.Like || mongoose.model("Like", LikeSchema)

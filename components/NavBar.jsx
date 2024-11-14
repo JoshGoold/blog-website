@@ -8,13 +8,14 @@ import { motion } from "framer-motion";
 
 const NavBar = () => {
   return (
-    <ul className="flex lg:gap-4 lg:flex-row flex-col items-center cursor-pointer  justify-end p-10">
+    <ul className="flex items-center cursor-pointer  justify-end p-10">
       <motion.li
         initial={{ opacity: 0, x: -100 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="lg:mr-auto"
+        className="mr-auto"
       >
+        <Link href="/">
         <Image
           title="Home"
           height={100}
@@ -23,6 +24,8 @@ const NavBar = () => {
           src={logo}
           alt="Logo"
         />
+        </Link>
+        
       </motion.li>
       <motion.li
         initial={{ opacity: 0 }}
@@ -38,7 +41,7 @@ const NavBar = () => {
         &nbsp;{" "}
         <input
           type="text"
-          className="border-neutral-400 p-1 lg:mt-0 mt-10 border rounded-md"
+          className="border-neutral-400 p-1 lg:mt-0   border rounded-md"
           placeholder="Search for blogs"
         />
       </motion.li>
@@ -48,10 +51,10 @@ const NavBar = () => {
         whileInView={{ opacity: 1}}
       >
         <Link
-          href="/blogs/latest"
+          href="/blogs"
           className="hover:shadow-md shadow-neutral-400 p-2 rounded-md"
         >
-          Latest
+          Blogs
         </Link>
       </motion.li>
       <motion.li
@@ -72,7 +75,7 @@ const NavBar = () => {
        whileInView={{ opacity: 1}}
       >
         <Link
-          href="/auth/admin"
+          href="/admin/login"
           className="hover:shadow-md shadow-neutral-400 p-2 rounded-md"
         >
           Admin

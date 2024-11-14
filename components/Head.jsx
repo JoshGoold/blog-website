@@ -8,6 +8,7 @@ const HeaderMain = () => {
       <Image
         src={background}
         className="w-[85%] ml-auto mr-auto h-[500px] opacity-30 bg-cover"
+        alt="image"
       ></Image>
     </div>
   );

@@ -6,9 +6,8 @@ const CommentSchema = new mongoose.Schema({
         required: true
     },
     owner: {
-        type: mongoose.SchemaTypes.ObjectId,
+        type: String,
         required: true,
-        ref: 'User'
     },
     blog: {
         type: mongoose.SchemaTypes.ObjectId,
@@ -17,4 +16,4 @@ const CommentSchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("Comment", CommentSchema)
+export default mongoose.models.Comment || mongoose.model("Comment", CommentSchema)

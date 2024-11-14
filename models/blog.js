@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const BlogSchema = new mongoose.Schema({
-    content: {
-        type: String,
-        required: true
-    },
+    content: [{
+        text: { type: String, required: true },
+        styles: [String]
+    }],
     likes: [{
         type: mongoose.SchemaTypes.ObjectId,
         ref: "Like"
@@ -14,9 +14,17 @@ const BlogSchema = new mongoose.Schema({
         ref: "Comment"
     }],
     owner: {
-        type: mongoose.SchemaTypes.ObjectId,
-        ref: "User"
+        type: String
+    },
+    createdAt: {
+        type: Date,
+        immutable: true,
+        default: () => new Date()
     }
+    
 })
 
-export default mongoose.model("Blog", BlogSchema)
+// delete mongoose.models.Blog
+
+
+export default mongoose.models.Blog || mongoose.model("Blog", BlogSchema)

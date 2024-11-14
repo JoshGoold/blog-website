@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <motion.div
     
-    className="p-10 flex image lg:flex-row flex-col items-center lg:justify-around">
+    className="p-10 flex text-white image bg-black lg:flex-row flex-col items-center lg:justify-around">
       <ul className="flex lg:flex-col lg:my-0 my-10 cursor-pointer gap-2">
         <li className=" hover:shadow-md shadow-neutral-400 p-2 rounded-md">
           About

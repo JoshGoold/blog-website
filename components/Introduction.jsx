@@ -19,12 +19,13 @@ const Introduction = () => {
         <div className="text-center my-10">
           <h1 className="text-6xl font-thin">Welcome to my Blog</h1>
         </div>
-        <div className="flex items-center">
+        <div className="flex lg:flex-row flex-col items-center">
           <Image
             className=" ml-auto mr-auto"
             height={400}
             width={400}
             src={clip1}
+            alt="image"
           ></Image>
           <p className="lg:max-w-[60%] ml-auto mr-auto">
             Welcome to my blog, where I explore the intersections of faith,
@@ -52,11 +53,11 @@ const Introduction = () => {
       transition={{duration: 1}}
       whileInView={{opacity: 1, y:0}}
        className="my-20 flex-col p-20 rounded-md  items-center">
-        <div className="flex justify-between mr-auto ml-auto max-w-[90%] items-center ">
+        <div className="flex lg:my-0 my-10  justify-center max-w-[90%] items-center ">
           <h1 className="text-4xl font-thin">Join me Today!</h1>
         </div>
 
-        <div className="flex items-center">
+        <div className="flex lg:flex-row flex-col items-center">
           <p className="lg:max-w-[60%] p-3 ml-auto mr-auto">
             I invite you to join the conversation by sharing your thoughts and
             insights on my blog posts. Whether you agree, have questions, or
@@ -73,6 +74,7 @@ const Introduction = () => {
             height={400}
             width={400}
             src={clip2}
+            alt="image"
           ></Image>
         </div>
       </motion.div>

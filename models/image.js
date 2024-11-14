@@ -12,4 +12,4 @@ const ImageSchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("Image", ImageSchema)
+export default mongoose.models.Image || mongoose.model("Image", ImageSchema)
