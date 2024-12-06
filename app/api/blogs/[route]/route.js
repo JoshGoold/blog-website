@@ -10,7 +10,7 @@ export async function GET(req, { params }) {
     let blogs;
 
     // Determine what to fetch based on the route
-    switch (params.route) {
+    switch (await params.route) {
       case "trending":
         blogs = await Blog.find().sort({ likes: -1 }).limit(5).populate('likes').populate('comments').lean();
         break;

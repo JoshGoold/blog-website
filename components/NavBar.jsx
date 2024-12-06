@@ -27,7 +27,7 @@ const NavBar = () => {
         </Link>
         
       </motion.li>
-      <motion.li
+      {/* <motion.li
         initial={{ opacity: 0 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1}}
@@ -44,6 +44,18 @@ const NavBar = () => {
           className="border-neutral-400 p-1 lg:mt-0   border rounded-md"
           placeholder="Search for blogs"
         />
+      </motion.li> */}
+      <motion.li
+        initial={{ opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ opacity: 1}}
+      >
+        <Link
+          href="/"
+          className="hover:shadow-md shadow-neutral-400 p-2 rounded-md"
+        >
+          Home
+        </Link>
       </motion.li>
       <motion.li
         initial={{ opacity: 0 }}
@@ -55,18 +67,6 @@ const NavBar = () => {
           className="hover:shadow-md shadow-neutral-400 p-2 rounded-md"
         >
           Blogs
-        </Link>
-      </motion.li>
-      <motion.li
-         initial={{ opacity: 0 }}
-         transition={{ duration: 1 }}
-         whileInView={{ opacity: 1 }}
-      >
-        <Link
-          href="/about"
-          className="hover:shadow-md shadow-neutral-400 p-2 rounded-md"
-        >
-          About
         </Link>
       </motion.li>
       <motion.li
